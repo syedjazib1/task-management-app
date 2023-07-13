@@ -29,6 +29,14 @@ This is a simple Task Management Application built with Angular. It allows users
 - `src/app/services`: Contains the Angular services for managing tasks
 - `src/app/models`: Contains the task model definition
 
+## Screenshots 
+1.Task List 
+- ![image](https://github.com/syedjazib1/task-management-app/assets/113434930/5e13e70a-e056-426f-aae5-16668f92917e)
+2.Add & Edit Modal
+- ![image](https://github.com/syedjazib1/task-management-app/assets/113434930/32773802-7d9d-48e0-9278-a537b6e636ae)
+
+
+
 ## Technologies Used
 
 - Angular
