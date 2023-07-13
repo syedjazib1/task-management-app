@@ -1,0 +1,59 @@
+<div class="task-list">
+<h2 >Task List</h2>
+<div class="filter-options">
+      <div class="search-container mb-2">
+        <input type="text" [(ngModel)]="searchQuery" placeholder="Search Tasks">
+        <button class="search-button" (click)="applySearchQuery()">Search</button>
+    </div>
+    <span class="filter-header">Filter Options:</span>
+    <button  (click)="filterTasks('all')"  [class.active]="selectedFilter === 'all'">All</button>
+    <button  (click)="filterTasks('completed')" [class.active]="selectedFilter === 'completed'">Completed</button>
+    <button  (click)="filterTasks('incomplete')" [class.active]="selectedFilter === 'incomplete'">Incomplete</button>
+  </div>
+  <!-- <ul>
+    <li *ngFor="let task of filteredTasks" >
+      <span [class.completed]="task.completed">{{ task.title }}</span>
+      <div class="task-actions">
+        <button (click)="markTaskAsCompleted(task)" [disabled]="task.completed">Mark Completed</button>
+        <button (click)="openEditModal(task)"  [disabled]="task.completed">Edit</button>
+        <button (click)="deleteTask(task)">Delete</button>
+      </div>
+    </li>
+  </ul> -->
+  <table>
+    <thead>
+      <tr>
+        <th class="task-title-column">Task Title</th>
+        <th class="task-action-column">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of filteredTasks">
+        <td [class.completed]="task.completed">{{ task.title }}</td>
+        <td class="task-actions">
+          <button (click)="markTaskAsCompleted(task)" [disabled]="task.completed">Mark Completed</button>
+        <button (click)="openEditModal(task)"  [disabled]="task.completed">Edit</button>
+        <button (click)="deleteTask(task)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="add-task-button" (click)="openAddTaskModal()">Add Task</button>
+</div>
+
+<!-- Add Task Modal -->
+<div class="modal"  [ngClass]="{ 'show': isAddTaskModalOpen }">
+  <div class="modal-content">
+    <h3 *ngIf="!selectedTask">Add Task</h3>
+    <h3 *ngIf="selectedTask">Edit Task</h3>
+    <div class="modal-form">
+    <form (ngSubmit)="addTask()">
+      <input type="text" id="title" name="newTaskTitle" placeholder="Task Title" [(ngModel)]="newTaskTitle" required>
+      <div class="modal-actions">
+        <button type="submit"[disabled]="!newTaskTitle">Add Task</button>
+        <button  (click)="closeAddTaskModal()">Cancel</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,170 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal.show {
+    display: block;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  .modal-actions button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .modal-actions button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  .modal-actions button:hover {
+    background-color: #0056b3;
+  }
+
+  .modal-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .modal-form input[type="text"] {
+    width: 100%;
+    padding: 5px;
+  }
+  
+  .modal-form .form-actions {
+    text-align: right;
+    margin-top: 10px;
+  }
+
+  .task-list {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .task-list h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .task-list .completed {
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .task-list .task-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .task-list .task-actions button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .task-list .task-actions button:hover {
+    background-color: #0056b3;
+  }
+  
+  .task-list .task-actions button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .task-list .add-task-button {
+   
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .task-list .add-task-button:hover {
+    background-color: #0056b3;
+  }  
+
+  .filter-options {
+    margin-bottom: 10px;
+  }
+  
+  .filter-options button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .filter-options button.active {
+    background-color: #0056b3;
+  }
+
+  .filter-header {
+    font-size: 17px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+  }
+  .search-container{
+padding-bottom: 10px;
+  }
+.search-container input{
+    margin-right: 5px;
+ }
+     
+ table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.task-title-column {
+  flex: 1;
+}
+
+.task-action-column {
+  flex: 0 0 120px; 
+}
+

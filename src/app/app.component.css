@@ -1,0 +1,18 @@
+.app-container {
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .app-content {
+    padding: 20px;
+  }
+  
